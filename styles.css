@@ -29,9 +29,10 @@ main{
 .font-size-title{
     font-size: 18px;
 }
-span{
+span, h1, h2, h3{
     font-family: 'Noto Sans Kawi', sans-serif;
 }
+
 
 
 .form{
@@ -39,7 +40,15 @@ span{
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    height: 550px;
+    max-height: 550px;
+    max-width: 420px;
+    border: 1px solid #BDBDBD;
+    border-radius: 25px;
+    padding: 60px 40px 40px 40px;
+}
+
+.form-login{
+    max-height: 480px;
     width: 400px;
     border: 1px solid #BDBDBD;
     border-radius: 25px;
@@ -48,6 +57,10 @@ span{
 
 .container-title{
     margin-bottom: 1.2rem;
+}
+
+.container-login{
+    margin-top: 1rem;
 }
 
 .container-title > div{
@@ -107,11 +120,122 @@ a{
 
 .container-input-icon{
     position: relative;
+    
 }
 
-.container-input-icon > span{
+.container-input-icon > input{
+    padding-left: 2.5rem;
+}
+
+.container-input-icon > img{
     position: absolute;
-    
-    top: 50%;
+    left: 8px; 
+    top: 35%;
     transform: translateY(-50%);
+}
+
+.container-first-profile{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E0E0E0;
+    
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 6rem;
+}
+
+.height-container-data{
+    height: 4rem;
+}
+.height-container-img{
+    height: 6rem;
+}
+.container-table{
+
+    
+    width: 50%;
+    margin: auto;
+}
+
+
+
+.container-profile-data{
+    border: 1px solid #E0E0E0;
+    
+}
+.container-last-profile{
+    border: 1px solid #E0E0E0;
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.btn-edit{
+    border: 1px solid #828282;
+    border-color: #828282;
+    background-color: transparent;
+    margin: 1.5rem 3.5rem 0 0;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+}
+
+
+.container-title-profile{
+    margin-left: 3.5rem;
+    padding-top: 1.5rem;
+    
+}
+
+table{
+    border-spacing: 0;
+    
+}
+
+.data-span{
+    color: #BDBDBD;
+    margin-left: 3.5rem; 
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.info-data{
+    margin-left: 15rem;
+}
+
+.profile{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.title-personal-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.title-personal-info > h1{
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.title-personal-info > h3{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.logout{
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-right: 3rem;
+}
+
+.btn-logout{
+    border: none;
+    background-color: transparent;
+    
 }

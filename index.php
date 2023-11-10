@@ -23,8 +23,8 @@
             </div>
             <div class="container-form">
                 <form action="./handle_db/signup.php" method="post">
-                    <div class="container-input-icon"><span class="material-symbols-outlined">mail</span><input type="email" name="email" placeholder="Email" class="input-login"></div>
-                    <div><input type="password" name="password" placeholder="Password" class="input-login"></div>
+                    <div class="container-input-icon"><img src="/public/default/email.svg" alt=""><input type="email" name="email" placeholder="Email" class="input-login"></div>
+                    <div class="container-input-icon"><img src="/public/default/lock.svg" alt=""><input type="password" name="password" placeholder="Password" class="input-login"/></div>
                     <button type="submit" class="btn-login">Start coding now</button>
                 </form>
             </div>

@@ -12,26 +12,26 @@
 </head>
 <body>
 <main>
-    <div class="form">
+    <div class="form-login">
         <div>
-            <div class="container-title">
+            <div class="container-title container-login">
             <div><span class="line-height font-weight-title font-size-title">Login</span></div>
             
             </div>
             <div class="container-form">
                 <form action="./handle_db/login.php" method="post">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="password" name="password" placeholder="Password">
-                    <button type="submit">Login</button>
+                    <div class="container-input-icon"><img src="/public/default/email.svg" alt=""><input type="email" name="email" placeholder="Email" class="input-login"></div>
+                    <div class="container-input-icon"><img src="/public/default/lock.svg" alt=""><input type="password" name="password" placeholder="Password" class="input-login"></div>
+                    <button type="submit" class="btn-login">Login</button>
                 </form>
             </div>
-            <div>
-                <span>or continue with these social profile</span>
-                <img src="./assets/Google.svg" alt="Google">
+            <div class="container-media">
+                <div class="social"><span class="social-profile">or continue with these social profile</span></div>
+                <div><img src="./assets/Google.svg" alt="Google">
                 <img src="./assets/Facebook.svg" alt="Facebook">
                 <img src="./assets/Twitter.svg" alt="Twitter">
-                <img src="./assets/Gihub.svg" alt="GitHub">
-                <span>Don't have an account yet?<a href="./index.php">Register</a></span>
+                <img src="./assets/Gihub.svg" alt="GitHub"></div>
+                <div class="member"><span class="social-profile">Don't have an account yet?<a href="./index.php"> Register</a></span></div>
             </div>
         </div>
     </div>
