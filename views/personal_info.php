@@ -61,40 +61,54 @@ require_once "../config/database.php";
         <tr>
         <td class="container-profile-data height-container-img">
             <div class="container-photo-personal">
-                <span class="data-span">PHOTO</span>
-            <div><?php
+                <div><span class="data-span">PHOTO</span></div>
+            <div class="subcontainer-photo">
+                <?php
                 if(isset($usuario["photo"])){
-                    $img = base64_encode($data["photo"]);
-                echo "<img class='photo' src='data:image/*;base64,$img'/>";
+                    $img = base64_encode($usuario["photo"]);
+                echo "<img class='photo ft-profile' src='data:image/*;base64,$img'/>";
                 }else{
-                    echo "<img class='photo' src='/public/default/default-avatar.jpg'/>";
+                    echo "<img class='photo ft-profile' src='/public/default/default-avatar.jpg'/>";
                 }
-            ?></div>
+            ?>
+            </div>
             </div>
         </td>
         </tr>
         <tr>
         <td class="container-profile-data height-container-data">
-            <span class="data-span">NAME</span>
-            <span class="info-data"><?= $usuario["name"] ?></span>
+            <div><span class="data-span">NAME</span></div>
+            <div><span class="info-data"><?php 
+            if(isset($usuario["name"])){
+                echo $usuario["name"];
+            }else{
+                echo "Tu nombre...";
+            }
+             ?></span></div>
         </td>
         </tr>
         <tr>
         <td class="container-profile-data height-container-data">
-            <span class="data-span">BIO</span>
-            <span class="info-data"><?= $usuario["bio"] ?></span>
+            <div><span class="data-span">BIO</span></div>
+            <div><span class="info-data"><?php 
+            if(isset($usuario["bio"])){
+                echo $usuario["bio"];
+            }else{
+                echo "Tu biografia...";
+            }
+             ?></span></div>
         </td>
         </tr>
         <tr>
         <td class="container-profile-data height-container-data">
-            <span class="data-span">EMAIL</span>
-            <span class="info-data"><?= $usuario["email"] ?></span>
+            <div><span class="data-span">EMAIL</span></div>
+            <div><span class="info-data"><?= $usuario["email"] ?></span></div>
         </td>
         </tr>
         <tr>
         <td class="container-last-profile height-container-data">
-            <span class="data-span">PASSWORD</span>
-            <span class="info-data">********</span>
+            <div><span class="data-span">PASSWORD</span></div>
+            <div><span class="info-data">********</span></div>
         </td>
         
         </tr>

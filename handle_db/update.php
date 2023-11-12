@@ -1,37 +1,5 @@
 <?php
 
-// if($_SERVER["REQUEST_METHOD"] === "POST"){
-
-//     session_start();
-//     $id = $_SESSION["user_id"];
-
-//     $name = $_POST["name"];
-//     $bio = $_POST["bio"];
-//     $phone = $_POST["phone"];
-//     $email = $_POST["email"];
-//     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-//     $tmp_name = $_FILES["imagen"]["tmp_name"];
-//     $contenido = addslashes(file_get_contents($tmp_name));
-//     require_once "../config/database.php";
-//     //$mysqli->query("insert into users(photo) values ('$contenido')");
-
-//     var_dump($contenido);
-
-    
-    
-//     if($name !== "" && $bio !== "" && $phone !== "" && $email !== "" && $password !== "" && $contenido !== ""){ 
-//     $result = $mysqli->query("update users set photo = '$contenido', name = '$name', bio = '$bio', phone = '$phone', email = '$email', password_hash = '$password' where id = $id ");
-//     }
-
-//     if ($result) {
-//         echo "Actualización exitosa.";
-//     } else {
-//         echo "Error al actualizar: " . $mysqli->error;
-//     }
-//     //header("Location: ../views/personal_info.php");
-// }
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     session_start();
     $id = $_SESSION["user_id"];
@@ -87,7 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "No se proporcionaron datos para actualizar.";
     }
 
-    // Cerrar la conexión
     $mysqli->close();
 
     header("Location: ../views/personal_info.php");

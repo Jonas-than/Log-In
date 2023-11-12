@@ -37,11 +37,7 @@ span, h1, h2, h3{
 
 
 .form{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    max-height: 550px;
+    max-height: 580px;
     max-width: 420px;
     border: 1px solid #BDBDBD;
     border-radius: 25px;
@@ -99,7 +95,7 @@ span, h1, h2, h3{
 }
 
 .member{
-    margin: 1rem 0 1rem 0;
+    margin: .5rem 0 1rem 0;
 }
 
 .container-media{
@@ -151,19 +147,29 @@ a{
 }
 
 .container-photo-personal{
-    display: flex;
     align-items: center;
 }
 
 .container-photo-personal > div{
-    margin-left: 4rem;
+    margin-left: 0;
 }
 
+.subcontainer-photo{
+    margin-left: 10rem;
+}
 
 .container-profile-data{
     border: 1px solid #E0E0E0;
     
 }
+
+.container-profile-data > div{
+    display: inline-flex;
+}
+.container-last-profile > div{
+    display: inline-flex;
+}
+
 .container-last-profile{
     border: 1px solid #E0E0E0;
     
@@ -322,6 +328,7 @@ table{
     height: 35px;
     font-weight: 500;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .container-form-change > form > input{
@@ -432,6 +439,7 @@ table{
     color: #828282;
     font-size: 13px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .container-photo > label > span{
@@ -440,11 +448,50 @@ table{
 
 .container-photo{
     margin-bottom: 1.5rem;
-    
 }
 
 .photo-logout{
     width: 30px;
     border-radius: 8px;
     margin-right: 1rem;
+}
+
+.ft-profile{
+    margin-left: 14.5rem;
+}
+
+.image-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay{
+    /* position: absolute; */
+    
+    transition: background-color 0.3s ease;
+}
+
+.overlay:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.photo, .hover-image{
+    object-fit: cover;
+    display: block;
+}
+
+.hover-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover .hover-image {
+    opacity: 1;
+}
+
+button{
+    cursor: pointer;
 }

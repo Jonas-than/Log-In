@@ -31,9 +31,11 @@
                 }else{
                     echo "Your name...";
                 }
-                 ?></span><img src="/public/default/arrow-down.svg"></button>
+                 ?></span>
+                 <img src="/public/default/arrow-down.svg" class="image-down" id="imageDown"/>
+                </button>
     <div class="modal">
-        <button class="btn-profile-logout"><img src="/public/default/account_circle_black_18dp.svg" alt="">My Profile</button>
+        <button class="btn-profile-logout" onclick="window.location.href='personal_info.php'"><img src="/public/default/account_circle_black_18dp.svg" alt="">My Profile</button>
         <button class="btn-profile-logout"><img src="/public/default/group_black_18dp.svg" alt="">Group Chat</button>
         <button class="btn-logout-design"><img src="/public/default/logout_black_18dp.svg" alt=""><a href="../handle_db/logout.php">Logout</a></button>
     </div>
@@ -46,17 +48,23 @@
             <h1>Change Info</h1>
             <span class="changes">Changes will be reflected to every services</span>
             <div class="container-form-change">
-            <form action="/handle_db/update.php" method="post" enctype="multipart/form-data">
+            <form action="/handle_db/update.php" method="post" enctype="multipart/form-data" id="perfilForm">
                 <div class="container-photo">
                 <label for="change_img">
+                    <div class="image-container">
+                        <div class="overlay">
                     <?php
                 if(isset($usuario["photo"])){
-                    $img = base64_encode($data["photo"]);
-                echo "<img class='photo' src='data:image/*;base64,$img'/>";
+                    $img = base64_encode($usuario["photo"]);
+                echo "<img id='fotoPerfil' class='photo' src='data:image/*;base64,$img'/>";
+                echo "<img id='fotoPerfil' class='hover-image' src='/public/default/photo-add.svg'/>";
                 }else{
-                    echo "<img class='photo' src='/public/default/default-avatar.jpg'/>";
+                    echo "<img id='fotoPerfil' class='photo' src='/public/default/default-avatar.jpg'/>";
+                    echo "<img id='fotoPerfil' class='hover-image' src='/public/default/photo-add.svg'/>";
                 }
                 ?>
+                        </div>
+                </div>
                 <span>CHANGE PHOTO</span>
                 </label>
                 <input type="file" accept="image/*" name="imagen" id="change_img" hidden/>
@@ -65,7 +73,7 @@
             <label>Name</label>
             <input placeholder="Enter your name..." type="text" name="name" value="<?= $usuario["name"] ?>"/>
             <label>Bio</label>
-            <textarea placeholder="Enter your bio..." name="bio" <?= $usuario["bio"] ?>></textarea>
+            <textarea placeholder="Enter your bio..." name="bio"><?php echo $usuario["bio"]; ?></textarea>
             
             <label>Phone</label>
             <input type="text" name="phone" placeholder="Enter your phone..." value="<?= $usuario["phone"] ?>"/>
